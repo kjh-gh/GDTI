@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block main_area %}
+<header>
+  <div class='title'>
+    <h1>GDTI</h1>
+    <p>꼰대 지수 테스트</p>
+  </div>
+</header>
+
+
+<div class='board'>
+    <div class='container'>
+      <article class='item'>
+        <script language='Javascript'>
+          expireDate = new Date
+          expireDate.setMonth(expireDate.getMonth()+3)
+          hitCt = eval(cookieVal('pageHit'))
+          hitCt++
+          document.cookie = 'pageHit='+hitCt+";expires="+expireDate.toGMTString()
+          function cookieVal(cookieName) {
+            thisCookie = document.cookie.split("; ")
+            for (i=0; i<thisCookie.length; i++){
+              if (cookieName == thisCookie[i].split('=')[0]){
+                return thisCookie[i].split('=')[1]
+              }
+            }
+            return 0
+          }
+        </script>
+        <script language='javascript' type='text/javascript'>
+          hitCt+=18320
+          document.write('<div class="visit"><font color=red>' + hitCt + "</font>명의<br>사람들이<br>검사에 참여</div>")
+        </script>
+      </article>
+      <article class='item'>
+        <a href="{% url 'prior_knowledge' %}" style="text-decoration-line: none; color:black;"><div class='btn'>GDTI란?</div></a>
+        <a href="{% url 'ready' %}" style="text-decoration-line: none; color:black;"><div class='btn'>검사하기</div></a>
+      </article>
+    </div>
+
+<article id='share'>
+    <div id='share_title'>공유하기</div>
+    <div id='share_btn'>
+      <a>
+        <div class='share_item' id='blog_icon'>
+          <img class="IMG" src='static/img/blog.png'>
+        </div>
+      </a>
+      <a>
+        <div class='share_item'>
+          <img class="IMG" src='static/img/kakao.png'>
+        </div>
+      </a>
+      <a>
+        <div onclick="copyUrl()" class='share_item'>
+          <img class="IMG" src='static/img/url.png'>
+        </div>
+      </a>
+    </div>
+</article>
+</div>
+
+<footer class='footer' id='F'>
+  <div class='lfoot'>
+    <div class='lfoot-ad'>
+      <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit = "DAN-ygNKE6VN3AsdlI1W"
+      data-ad-width = "320"
+      data-ad-height = "100"></ins>
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </div>
+    <div class='lfoot-ad'>
+      <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit = "DAN-nI2zFcUj3lGScQkD"
+      data-ad-width = "320"
+      data-ad-height = "100"></ins>
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </div>
+  </div>
+  <div class='rfoot'>
+    <a href="https://link.coupang.com/a/bKN2xw" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/793664?subId=&traceId=V0-301-879dd1202e5c73b2-I793664&w=728&h=90" alt=""></a>
+    <a href="https://link.coupang.com/a/bKN7RB" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/793675?subId=&traceId=V0-301-5a8c79a76485eb21-I793675&w=728&h=90" alt=""></a>
+  </div>  
+</footer>
+<div class='FFFF'>이 포스팅은 쿠팡 파트너스 활동의 일환으로,이에 따른 일정액의 수수료를 제공받습니다.</div>
+
+{% endblock %}

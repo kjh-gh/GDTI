@@ -1,0 +1,42 @@
+{% extends 'basement.html' %}
+{% load static %}
+{% block sub_area %}
+<article class='air'>
+    <hgroup>
+        <h2 class='ur'>당신은<br>"징기스칸"입니다</h2>
+        <p class='intro'>게르 설치하기가 취미인 유목민</p>
+    </hgroup>
+
+    <img class="IMAGE" src="{% static 'img/kan.png' %}">
+
+    <div class='explain'>
+        <details class='pros'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;장점</summary>
+            <p>습관적으로 관습을 깨며, 틀에 박혀있는것을 혐오합니다.<br>
+            결과가 어떻든 간에 새로운 환경에 자신을 내던지는 것을 좋아합니다</p>
+        </details>
+          
+        <hr/>
+          
+        <details class='cons'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;단점</summary>
+            <p>
+            본인을 너무 믿고 행동하는 탓에 결과가 좋지 않을 때도 있어요<br>
+            꼰대의 딱 정반대 성향입니다. 그래서 미래에 꼰대가 된다면<br>상대를 생각하기보다는
+            자기 스스로를 뽐내기 위해서<br>조언하는 척하는 최악의 사람이 될 수도있습니다.
+            </p> 
+        </details>
+    
+        <hr />
+    
+        <details class='develop'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;개선할 점</summary>
+            <p>
+                1. 과거에 자신이 설치했던 수많은 게르가 자신을 막을수도 있어요<br>
+                2. 세상에는 가슴(=충동적)보다는 엉덩이(집중력)를 사용하여<br>해야하는 일이 더 많아요<br>
+            </p>
+        </details>
+    </div>
+    <a href="{% url 'main_page' %}"><button class="contrast" id='Hommy'>home</button></a>
+</article>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'basement.html' %}
+{% load static %}
+{% block sub_area %}
+<article class='air'>
+    <hgroup>
+        <h2 class='ur'>당신은<br>"일반인"입니다</h2>
+        <p class='intro'>난 일반적인 일반인이다</p>
+    </hgroup>
+
+    <img class="IMAGE" src="{% static 'img/nomal.jpeg' %}">
+
+    <div class='explain'>
+        <details class='pros'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;장점</summary>
+            <p>가장 많은 사람들이 분포하고 있는 부류입니다.<br>따라서 자신의 생각이 대중의 생각과 크게 벗어나지 않죠.<br>그렇기에 인간관계에 큰 문제가 없고 개개인의 센스에 따라서<br>알파(fe)male들이 가장 많이 속해있는 부류이기도 합니다.</p>
+        </details>
+          
+        <hr />
+          
+        <details class='cons'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;단점</summary>
+            <p>자신의 주관이 부족할 수 있어요.<br>나의 생각이 주변의 생각과 비슷하다는 말을 조금 다르게하면<br>
+            나의 생각을 주변의 생각에 맞춰가게 될수도 있단 뜻입니다.<br>주변의 생각은 고정되어있지 않아요.</p>
+        </details>
+    
+        <hr />
+    
+        <details class='develop'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;개선할 점</summary>
+            <p>
+                1. 만약 현재의 일상이 지루해서 변화를 줘보고 싶다면,<br> 자신의 색을 표현할 수 있는 활동을 찾아 보세요<br>
+                2. 인터넷이나 sns에서 나오는 말에 너무 휘둘리지 마세요!
+            </p>
+        </details>
+    </div>
+    <a href="{% url 'main_page' %}"><button class="contrast" id='Hommy'>home</button></a>
+</article>
+{% endblock %}

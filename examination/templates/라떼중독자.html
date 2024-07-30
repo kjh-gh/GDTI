@@ -1,0 +1,38 @@
+{% extends 'basement.html' %}
+{% load static %}
+{% block sub_area %}
+    <article class='air'>
+        <hgroup>
+            <h2 class='ur'>당신은<br>"라떼 중독자"입니다</h2>
+            <p class='intro'>나는 대학에서 라떼 내리기를 전공했단 사실</p>
+        </hgroup>
+
+        <img class="IMAGE" src="{% static 'img/coffee.png' %}">
+ 
+        <div class='explain'>
+            <details class='pros'>
+                <summary>&nbsp;&nbsp;&nbsp;&nbsp;장점</summary>
+                <p>성실하고 책임감이 강해요<br>그래서 자신이 맡은 일 하나는 확실하게 끝내려 노력하죠.<br>주변에서 리더쉽 있다는 말 또한 가끔 들어본적 있을거에요</p>
+            </details>
+              
+            <hr />
+              
+            <details class='cons'>
+                <summary>&nbsp;&nbsp;&nbsp;&nbsp;단점</summary>
+                <p>잔소리가 심해요 그래서 했던 말을 반복하고 가끔 강요해요.<br>그 결과로 혼밥을 자주하거나 상대가 전화를 빨리 끊으려고 하죠</p>
+            </details>
+        
+            <hr />
+        
+            <details class='develop'>
+                <summary>&nbsp;&nbsp;&nbsp;&nbsp;개선할 점</summary>
+                <p>
+                    1. 다른사람의 말을 나의 의견에 반영해보려는 노력을 해보세요<br>
+                    2. 내가 다 해야한다는 생각을 버리세요<br>
+                    3. 한번 말했으면 반복하지 마세요!!!<br>
+                </p>
+            </details>
+        </div>
+        <a href="{% url 'main_page' %}"><button class="contrast" id='Hommy'>home</button></a>
+    </article>
+{% endblock %}

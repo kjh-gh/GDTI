@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="7s-zGD9imBgJsQAZ2XVD_9XjJ84V9X6Dr3lhs0Ycq2o" />
+    <meta name="naver-site-verification" content="2b604f5cf1704744dda7ba6406927b16ed4c6541" />
+    <link rel="icon" href="{% static 'img/icon.png' %}?after">
+    <link rel='stylesheet' href="{% static 'css/style.css' %}?after"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+    <title>GDTI</title>
+</head>
+<body>
+    {% block main_area %}
+    {% endblock %}
+    <script type="text/javascript" src="{% static 'js/share.js' %}"></script>
+</body>
+</html>

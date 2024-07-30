@@ -1,0 +1,40 @@
+{% extends 'basement.html' %}
+{% load static %}
+{% block sub_area %}
+<article class='air'>
+    <hgroup>
+        <h2 class='ur'>당신은<br>"자유로운 영혼"입니다</h2>
+        <p class='intro'>흘러가는데로 흘러가렵니다.</p>
+    </hgroup>
+
+    <img class="IMAGE" src="{% static 'img/free.png' %}">
+
+    <div class='explain'>
+        <details class='pros'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;장점</summary>
+            <p>
+                머리가 좋은 편이라 유도리있게 행동 할수있어요.<br>
+                눈치가 빠르고 생각도 많죠. 하지만 역설적으로 스트레스없는 사람 같아보인다는 말을 자주들어요. 누군가는 피곤하다 느낄 이 과정을 mbti에 따라 즐기는 사람도 있습니다.
+            </p>
+        </details>
+          
+        <hr />
+          
+        <details class='cons'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;단점</summary>
+            <p>항상 저울질하여 신중하게 선택하기에 오히려 일반 사람들에게는<br>아무것도 아닌 일이 스트레스가 될 수도 있어요.<br>선택하고 후회하거나 후회할까봐 선택하지 못할 때가 자주있죠</p>
+        </details>
+    
+        <hr />
+    
+        <details class='develop'>
+            <summary>&nbsp;&nbsp;&nbsp;&nbsp;개선할 점</summary>
+            <p>
+                1. 한번 자신이 하기로 맘먹은 일을 포기하지말고 성과를 내보세요<br>
+                2. 남의 충고와 조언보단 본인이 스스로를 가장 잘 알겁니다
+            </p>
+        </details>
+    </div>
+    <a href="{% url 'main_page' %}"><button class="contrast" id='Hommy'>home</button></a>
+</article>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block main_area %}
+<header>
+  <div class='title'>
+    <h2>검사설명</h2>
+    <p>GDTI를 어떻게 사용해야 할까요?</p>
+  </div>
+</header>
+
+<div class='board'>
+  <div class='frame'>
+    <div class='contents'>
+        <article id='direction'>
+          GDTI [Ggon Dae Type Indicator]는 간단한 24개의 질문만으로<br>
+          자신의 꼰대 지수를 알수있게 해주는 검사입니다<br><br>
+          GDTI 검사는 얼마나 꼰대같은가?를 기준으로<br>징키츠칸 -  자유로운 영혼 - 일반인 - 라떼중독자 - 흥선대원군<br>5가지 캐릭터 중 하나로 검사자를 분류합니다.
+          <br>끝으로 갈수록 꼰대력이 높다고 받아드릴 수 있습니다.<br><br>
+          요즘은 젊은 꼰대도 많다고 하죠~!!<br><br>
+          자신이 꼰대인지 아닌지를 아는것은 건강한 인간관계의<br>시작이라 볼 수 있습니다.
+          검사를 진행한뒤에 자신을 나타내는<br>캐릭터의 장단점을 파악해보세요<br><br>
+          당신의 상태가 GDTI검사의 결과를 받아들이지 못할정도로<br>심각한 수준이 아니길 바랍니다.
+          감사합니다 :)
+          <br>
+          <a href='{% url 'main_page' %}'><button class='contrast' id='home'>홈으로</button></a>
+        </article>
+    </div>
+  </div>
+</div>
+
+<footer class='footer'>
+  <div class='lfoot'>
+    <div class='lfoot_ad'>
+      <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit = "DAN-SwINIV94m69q3Fmd"
+      data-ad-width = "320"
+      data-ad-height = "50"></ins>
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  </div>
+  </div>
+</footer>
+{% endblock %}

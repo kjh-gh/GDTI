@@ -1,0 +1,29 @@
+{% extends 'basement.html' %}
+{% load static %}
+{% block sub_area %}
+<div class='paan'>
+    <form method="post" action='{% url 'calcu' %}'>
+        {% csrf_token %}
+        {% for q in questions %}
+            {{q}}
+            <br>
+            <div class='click' >
+                <label class='lvl'>
+                    <input type='radio' name='{{ forloop.counter0 }}' value='0'>
+                    그렇지 않다
+                </label>
+                <label class='lvl'>
+                    <input type='radio' name='{{ forloop.counter0 }}' value='1'>
+                    상황에 따라 다르다
+                </label>
+                <label class='lvl'>
+                    <input type='radio' name='{{ forloop.counter0 }}' value='2'>
+                    그렇다
+                </label>
+            </div>
+            <hr class='gap'>
+        {% endfor %}
+        <input type="submit" value="검사 결과보기" id='test_check' id='btn' class="contrast"/>
+    </form>
+</div>
+{% endblock %}
